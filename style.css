@@ -1,0 +1,16 @@
+.semana {
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border-radius: 12px;       /* Bordes redondeados */
+    padding: 25px;             /* Espacio dentro de la tarjeta */
+    margin: 20px 0;            /* Espacio entre tarjetas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #e0e0e0; /* Un borde muy fino para definirla mejor */
+    transition: transform 0.2s ease; /* Para que interactúe al pasar el mouse */
+    text-align: left;          /* El texto de la bitácora suele leerse mejor a la izquierda */
+    color: #333;               /* Color de texto oscuro para legibilidad */
+}
+
+.semana:hover {
+    transform: translateY(-5px); /* Se eleva un poquito al pasar el mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* La sombra aumenta al elevarse */
+}
