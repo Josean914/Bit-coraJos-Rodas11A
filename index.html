@@ -62,11 +62,12 @@
             box-sizing: border-box;
         }
 
-        /* Estilo para los títulos de las semanas estilo la foto */
-        .semana h3 {
-            margin-top: 0;
-            color: #6366f1; /* Color azul/morado similar al de la imagen */
-            font-size: 1.5rem;
+        .section-title {
+            text-align: center;
+            margin: 40px 0 25px;
+            color: #1f715e;
+            border-bottom: 2px solid #1f715e;
+            padding-bottom: 10px;
         }
 
         /* Tarjetas de la Bitácora */
@@ -85,6 +86,12 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(12, 222, 194, 0.2);
             border-color: #0cdec2;
+        }
+
+        .semana h3 {
+            margin-top: 0;
+            color: #6366f1; /* Color azul/morado similar al de la imagen */
+            font-size: 1.5rem;
         }
 
         .semana p {
@@ -191,12 +198,13 @@
     </header>
 
     <main>
+        <h2 class="section-title">Bitácora de Actividades</h2>
         
         <div class="semana">
             <h3>Semana 1: Introducción a Arduino</h3>
             <p>En esta sección aprendimos sobre los componentes de Arduino y cómo interactuar con elementos electrónicos básicos.</p>
             
-            <iframe src="tu-archivo.pdf" class="recurso-media" height="500"></iframe>
+            <iframe src="Recursos/pdf/introduccion_arduino.pdf" class="recurso-media" height="500"></iframe>
             
             <a href="Recursos/pdf/introduccion_arduino.pdf" target="_blank" class="link-alternativo">
                 ¿No puedes ver el PDF? Haz clic aquí para abrirlo en otra pestaña.
@@ -208,7 +216,7 @@
             <p>En esta clase exploramos cómo dar vida a nuestro primer circuito con Arduino UNO usando estructuras avanzadas en Tinkercad (Diseño de semáforo básico).</p>
             
             <video controls class="recurso-media">
-                <source src="LedDONBO.mp4" type="video/mp4">
+                <source src="Recursos/videos/circuito_semana2.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
             <center><small style="color:#777;">Video explicativo del circuito.</small></center>
@@ -219,7 +227,7 @@
             <p>En esta clase exploramos cómo dar vida a nuestro primer circuito con un módulo RGB en Arduino UNO mediante estructuras avanzadas en Tinkercad.</p>
             
             <video controls class="recurso-media">
-                <source src="WIN_20260709_08_53_35_Pro.mp4" type="video/mp4">
+                <source src="Recursos/videos/circuito_rgb.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
             <center><small style="color:#777;">Video explicativo del circuito.</small></center>
@@ -230,6 +238,28 @@
             <p>En esta clase exploramos cómo dar vida a nuestro primer circuito utilizando un LED RGB y LEDs estándar con Arduino UNO en físico.</p>
             
             <img src="Recursos/img/circuito_fisico.jpg" alt="Circuito en físico Arduino" class="recurso-media">
+        </div>
+
+        <div class="semana">
+            <h3>Semana 5: Integración de sensores y actuadores</h3>
+            <p>En esta clase trabajamos con la lectura analógica de sensores (como potenciómetros o fotorresistencias LDR) y controlamos actuadores en base a esas lecturas.</p>
+            
+            <video controls class="recurso-media">
+                <source src="Recursos/videos/circuito_semana5.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <center><small style="color:#777;">Video explicativo del circuito.</small></center>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 6: Proyecto final y depuración de código</h3>
+            <p>Presentación y puesta a prueba de nuestro circuito final automatizado. Optimizamos las conexiones eléctricas y refinamos el código de programación.</p>
+            
+            <video controls class="recurso-media">
+                <source src="Recursos/videos/circuito_semana6.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <center><small style="color:#777;">Video explicativo del circuito.</small></center>
         </div>
 
     </main>
