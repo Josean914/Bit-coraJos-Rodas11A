@@ -62,12 +62,11 @@
             box-sizing: border-box;
         }
 
-        .section-title {
-            text-align: center;
-            margin: 40px 0 25px;
-            color: #1f715e;
-            border-bottom: 2px solid #1f715e;
-            padding-bottom: 10px;
+        /* Estilo para los títulos de las semanas estilo la foto */
+        .semana h3 {
+            margin-top: 0;
+            color: #6366f1; /* Color azul/morado similar al de la imagen */
+            font-size: 1.5rem;
         }
 
         /* Tarjetas de la Bitácora */
@@ -75,7 +74,7 @@
             background-color: #ffffff;
             border-radius: 15px;
             padding: 25px;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
             border: 1px solid #e0e0e0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
@@ -88,67 +87,40 @@
             border-color: #0cdec2;
         }
 
-        .semana h3 {
-            margin-top: 0;
-            color: #1a1a2e;
+        .semana p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        .semana p {
-            color: #555555;
-            line-height: 1.6;
+        /* Contenedores multimedia adaptables */
+        .recurso-media {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #dddddd;
+            display: block;
             margin-bottom: 15px;
         }
-
-        /* Botón de PDF específico para las semanas */
-        .btn-semana-pdf {
-            display: inline-block;
-            padding: 8px 18px;
-            background-color: #1f715e;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-semana-pdf:hover {
-            background-color: #0cdec2;
-            color: #1a1a2e;
-        }
-
-        /* Sección de PDF General */
-        .contenedor-pdf {
-            background-color: #ffffff;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 40px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .visor-pdf {
+        
+        /* Ajuste específico para videos de Tinkercad o YouTube */
+        video, iframe {
             width: 100%;
-            height: 500px;
-            border-radius: 10px;
-            border: 1px solid #cccccc;
-            margin-top: 15px;
-        }
-
-        .btn-descarga {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #1f715e;
-            color: white;
-            text-decoration: none;
+            height: 450px;
+            border: none;
             border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
         }
 
-        .btn-descarga:hover {
-            background-color: #154d40;
+        .link-alternativo {
+            display: block;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #0066cc;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .link-alternativo:hover {
+            text-decoration: underline;
         }
 
         /* Footer Estilizado */
@@ -202,8 +174,8 @@
                 text-align: center;
                 padding: 30px 20px;
             }
-            .visor-pdf {
-                height: 350px;
+            video, iframe {
+                height: 250px;
             }
         }
     </style>
@@ -219,37 +191,47 @@
     </header>
 
     <main>
-        <h2 class="section-title">Bitácora de Actividades</h2>
-
-        <!-- Semana 1 con PDF integrado -->
+        
         <div class="semana">
-            <h3>Semana 1: Creación de página web</h3>
-            <p>En esta semana aprendimos a utilizar Visual Studio Code e iniciamos la programación de nuestra página web, estructurando el esqueleto básico con etiquetas HTML5.</p>
+            <h3>Semana 1: Introducción a Arduino</h3>
+            <p>En esta sección aprendimos sobre los componentes de Arduino y cómo interactuar con elementos electrónicos básicos.</p>
             
-            <a href="semana1.pdf" target="_blank" class="btn-semana-pdf">
-                📄 Ver Documento de la Semana 1
+            <iframe src="Recursos/pdf/introduccion_arduino.pdf" class="recurso-media" height="500"></iframe>
+            
+            <a href="Recursos/pdf/introduccion_arduino.pdf" target="_blank" class="link-alternativo">
+                ¿No puedes ver el PDF? Haz clic aquí para abrirlo en otra pestaña.
             </a>
         </div>
 
         <div class="semana">
-            <h3>Semana 2: Personalizar página web</h3>
-            <p>Personalizamos nuestra página agregando estilos CSS (Cascading Style Sheets) para definir colores, márgenes y efectos visuales como el sombadge de texto neón.</p>
-        </div>
-
-        <h2 class="section-title">Documentación Oficial</h2>
-
-        <div class="contenedor-pdf">
-            <h3>Visor de Documento</h3>
-            <p>Puedes previsualizar el documento de soporte aquí mismo o descargarlo para leerlo más tarde.</p>
+            <h3>Semana 2: Primer circuito y programación</h3>
+            <p>En esta clase exploramos cómo dar vida a nuestro primer circuito con Arduino UNO usando estructuras avanzadas en Tinkercad (Diseño de semáforo básico).</p>
             
-            <embed src="tu-archivo.pdf" type="application/pdf" class="visor-pdf" />
-
-            <div style="text-align: center;">
-                <a href="tu-archivo.pdf" download class="btn-descarga">
-                    📥 Descargar Archivo PDF
-                </a>
-            </div>
+            <video controls class="recurso-media">
+                <source src="Recursos/videos/circuito_semana2.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <center><small style="color:#777;">Video explicativo del circuito.</small></center>
         </div>
+
+        <div class="semana">
+            <h3>Semana 3: Primer circuito y programación LED RGB</h3>
+            <p>En esta clase exploramos cómo dar vida a nuestro primer circuito con un módulo RGB en Arduino UNO mediante estructuras avanzadas en Tinkercad.</p>
+            
+            <video controls class="recurso-media">
+                <source src="Recursos/videos/circuito_rgb.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <center><small style="color:#777;">Video explicativo del circuito.</small></center>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 4: Primer circuito y programación en físico</h3>
+            <p>En esta clase exploramos cómo dar vida a nuestro primer circuito utilizando un LED RGB y LEDs estándar con Arduino UNO en físico.</p>
+            
+            <img src="Recursos/img/circuito_fisico.jpg" alt="Circuito en físico Arduino" class="recurso-media">
+        </div>
+
     </main>
 
     <footer>
