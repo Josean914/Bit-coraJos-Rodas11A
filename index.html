@@ -11,8 +11,8 @@
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #0cdec2;
-            color: #0cdec2;
+            background-color: #f4f7f6;
+            color: #333333;
         }
 
         body {
@@ -23,10 +23,10 @@
         /* Encabezado con efecto neón */
         header {
             padding: 40px 20px;
-            background-color: rgb(72, 255, 0);
-            color: rgb(123, 123, 123);
+            background-color: #1a1a2e;
+            color: #ffffff;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         h1 {
@@ -34,9 +34,9 @@
             font-size: 2.5rem;
             color: #fff;
             text-shadow:
-                0 0 5px rgb(19, 144, 190),
-                0 0 15px #239cc1,
-                0 0 30px #239cc1;
+                0 0 5px #0cdec2,
+                0 0 15px #0cdec2,
+                0 0 30px #0cdec2;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -46,6 +46,10 @@
             margin: 10px 0 0;
             font-weight: 300;
             opacity: 0.9;
+        }
+
+        header h2 {
+            color: #0cdec2;
         }
 
         /* Contenedor Principal */
@@ -80,22 +84,46 @@
 
         .semana:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 119, 255, 0.12);
-            border-color: hsl(186, 82%, 65%);
+            box-shadow: 0 8px 25px rgba(12, 222, 194, 0.2);
+            border-color: #0cdec2;
         }
 
         .semana h3 {
             margin-top: 0;
-            color: #000000;
+            color: #1a1a2e;
         }
 
-        /* Sección de PDF */
+        .semana p {
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Botón de PDF específico para las semanas */
+        .btn-semana-pdf {
+            display: inline-block;
+            padding: 8px 18px;
+            background-color: #1f715e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-semana-pdf:hover {
+            background-color: #0cdec2;
+            color: #1a1a2e;
+        }
+
+        /* Sección de PDF General */
         .contenedor-pdf {
-            background-color: #fdfdfd;
+            background-color: #ffffff;
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 40px;
-            border: 1px solid #2e0530;
+            border: 1px solid #e0e0e0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
@@ -103,7 +131,7 @@
             width: 100%;
             height: 500px;
             border-radius: 10px;
-            border: 1px solid #0d1219;
+            border: 1px solid #cccccc;
             margin-top: 15px;
         }
 
@@ -111,8 +139,8 @@
             display: inline-block;
             margin-top: 20px;
             padding: 12px 25px;
-            background-color: #0b030d;
-            color: rgb(255, 255, 255);
+            background-color: #1f715e;
+            color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
@@ -120,14 +148,14 @@
         }
 
         .btn-descarga:hover {
-            background-color: #000000;
+            background-color: #154d40;
         }
 
         /* Footer Estilizado */
         footer {
-            background-color: rgb(255, 255, 255);
+            background-color: #ffffff;
             padding: 25px 50px;
-            border-top: 2px solid rgb(255, 255, 255);
+            border-top: 1px solid #e0e0e0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -136,7 +164,7 @@
 
         .footer-social {
             font-weight: bold;
-            color: #414975;
+            color: #1f715e;
             font-size: 1.1rem;
         }
 
@@ -158,12 +186,12 @@
         .search-box input {
             padding: 8px 12px;
             border-radius: 5px;
-            border: 1px solid #1a006d;
+            border: 1px solid #cccccc;
             outline: none;
         }
 
         .search-box input:focus {
-            border-color: #000000;
+            border-color: #1f715e;
         }
 
         /* Adaptación para Celulares */
@@ -193,14 +221,19 @@
     <main>
         <h2 class="section-title">Bitácora de Actividades</h2>
 
+        <!-- Semana 1 con PDF integrado -->
         <div class="semana">
             <h3>Semana 1: Creación de página web</h3>
             <p>En esta semana aprendimos a utilizar Visual Studio Code e iniciamos la programación de nuestra página web, estructurando el esqueleto básico con etiquetas HTML5.</p>
+            
+            <a href="semana1.pdf" target="_blank" class="btn-semana-pdf">
+                📄 Ver Documento de la Semana 1
+            </a>
         </div>
 
         <div class="semana">
             <h3>Semana 2: Personalizar página web</h3>
-            <p>Personalizamos nuestra página agregando estilos CSS (Cascading Style Sheets) para definir colores, márgenes y efectos visuales como el sombreado de texto neón.</p>
+            <p>Personalizamos nuestra página agregando estilos CSS (Cascading Style Sheets) para definir colores, márgenes y efectos visuales como el sombadge de texto neón.</p>
         </div>
 
         <h2 class="section-title">Documentación Oficial</h2>
